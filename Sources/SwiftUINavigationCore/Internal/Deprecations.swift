@@ -2,6 +2,7 @@ import SwiftUI
 
 // NB: Deprecated after 0.5.0
 
+@available(iOS 13.0, *)
 extension ButtonState {
   @available(*, deprecated, message: "Use 'ButtonStateAction<Action>' instead.")
   public typealias Handler = ButtonStateAction<Action>
@@ -13,6 +14,7 @@ extension ButtonState {
   public typealias Role = ButtonStateRole
 }
 
+@available(iOS 13.0, *)
 extension ButtonStateAction {
   @available(*, deprecated, message: "Use 'ButtonState.withAction' instead.")
   public typealias ActionType = _ActionType
@@ -20,6 +22,7 @@ extension ButtonStateAction {
 
 // NB: Deprecated after 0.3.0
 
+@available(iOS 13.0, *)
 extension AlertState {
   @available(*, deprecated, message: "Use 'ButtonState<Action>' instead.")
   public typealias Button = ButtonState<Action>

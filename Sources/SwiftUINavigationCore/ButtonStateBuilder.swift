@@ -1,3 +1,4 @@
+@available(iOS 13.0, *)
 @resultBuilder
 public enum ButtonStateBuilder<Action> {
   public static func buildArray(_ components: [[ButtonState<Action>]]) -> [ButtonState<Action>] {

@@ -43,11 +43,13 @@ import SwiftUI
 /// - Note: ``TextState`` does not support _all_ `LocalizedStringKey` permutations at this time
 ///   (interpolated `SwiftUI.Image`s, for example). ``TextState`` also uses reflection to determine
 ///   `LocalizedStringKey` equatability, so be mindful of edge cases.
+@available(iOS 13.0, *)
 public struct TextState: Equatable, Hashable {
   fileprivate var modifiers: [Modifier] = []
   fileprivate let storage: Storage
 
-  fileprivate enum Modifier: Equatable, Hashable {
+    @available(iOS 13.0, *)
+    fileprivate enum Modifier: Equatable, Hashable {
     case accessibilityHeading(AccessibilityHeadingLevel)
     case accessibilityLabel(TextState)
     case accessibilityTextContentType(AccessibilityTextContentType)
@@ -162,6 +164,7 @@ public struct TextState: Equatable, Hashable {
 
 // MARK: - API
 
+@available(iOS 13.0, *)
 extension TextState {
   public init(verbatim content: String) {
     self.storage = .verbatim(content)
@@ -304,6 +307,7 @@ extension TextState {
 
 // MARK: Accessibility
 
+@available(iOS 13.0, *)
 extension TextState {
   public enum AccessibilityTextContentType: String, Equatable, Hashable {
     case console, fileSystem, messaging, narrative, plain, sourceCode, spreadsheet, wordProcessing
@@ -412,6 +416,7 @@ extension TextState {
   }
 }
 
+@available(iOS 13.0, *)
 extension Text {
   public init(_ state: TextState) {
     let text: Text
@@ -572,6 +577,7 @@ extension Text {
   }
 }
 
+@available(iOS 13.0, *)
 extension String {
   public init(state: TextState, locale: Locale? = nil) {
     switch state.storage {
@@ -592,6 +598,7 @@ extension String {
   }
 }
 
+@available(iOS 13.0, *)
 extension LocalizedStringKey {
   // NB: `LocalizedStringKey` conforms to `Equatable` but returns false for equivalent format
   //     strings. To account for this we reflect on it to extract and string-format its storage.
@@ -632,6 +639,7 @@ extension LocalizedStringKey {
 
 // MARK: - CustomDumpRepresentable
 
+@available(iOS 13.0, *)
 extension TextState: CustomDumpRepresentable {
   public var customDumpValue: Any {
     func dumpHelp(_ textState: Self) -> String {

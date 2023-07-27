@@ -1,6 +1,7 @@
 import CustomDump
 import SwiftUI
 
+@available(iOS 13.0, *)
 public struct ButtonState<Action>: Identifiable {
   public let id: UUID
   public let action: ButtonStateAction<Action>
@@ -109,6 +110,7 @@ public struct ButtonState<Action>: Identifiable {
 }
 
 /// A type that wraps an action with additional context, _e.g._ for animation.
+@available(iOS 13.0, *)
 public struct ButtonStateAction<Action> {
   public let type: _ActionType
 
@@ -159,6 +161,7 @@ public enum ButtonStateRole {
   case destructive
 }
 
+@available(iOS 13.0, *)
 extension ButtonState: CustomDumpReflectable {
   public var customDumpMirror: Mirror {
     var children: [(label: String?, value: Any)] = []
@@ -175,6 +178,7 @@ extension ButtonState: CustomDumpReflectable {
   }
 }
 
+@available(iOS 13.0, *)
 extension ButtonStateAction: CustomDumpReflectable {
   public var customDumpMirror: Mirror {
     switch self.type {
@@ -198,9 +202,12 @@ extension ButtonStateAction: CustomDumpReflectable {
   }
 }
 
+@available(iOS 13.0, *)
 extension ButtonStateAction: Equatable where Action: Equatable {}
+@available(iOS 13.0, *)
 extension ButtonStateAction._ActionType: Equatable where Action: Equatable {}
 extension ButtonStateRole: Equatable {}
+@available(iOS 13.0, *)
 extension ButtonState: Equatable where Action: Equatable {
   public static func == (lhs: Self, rhs: Self) -> Bool {
     lhs.action == rhs.action
@@ -209,7 +216,9 @@ extension ButtonState: Equatable where Action: Equatable {
   }
 }
 
+@available(iOS 13.0, *)
 extension ButtonStateAction: Hashable where Action: Hashable {}
+@available(iOS 13.0, *)
 extension ButtonStateAction._ActionType: Hashable where Action: Hashable {
   public func hash(into hasher: inout Hasher) {
     switch self {
@@ -219,6 +228,7 @@ extension ButtonStateAction._ActionType: Hashable where Action: Hashable {
   }
 }
 extension ButtonStateRole: Hashable {}
+@available(iOS 13.0, *)
 extension ButtonState: Hashable where Action: Hashable {
   public func hash(into hasher: inout Hasher) {
     hasher.combine(self.action)
@@ -229,6 +239,7 @@ extension ButtonState: Hashable where Action: Hashable {
 
 // MARK: - SwiftUI bridging
 
+@available(iOS 13.0, *)
 extension Alert.Button {
   /// Initializes a `SwiftUI.Alert.Button` from `ButtonState` and an action handler.
   ///
@@ -280,6 +291,7 @@ extension ButtonRole {
   }
 }
 
+@available(iOS 13.0, *)
 extension Button where Label == Text {
   /// Initializes a `SwiftUI.Button` from `ButtonState` and an async action handler.
   ///

@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 13.0, *)
 extension View {
   /// Synchronizes model state to view state via two-way bindings.
   ///
@@ -67,6 +68,7 @@ extension AccessibilityFocusState.Binding: _Bindable {}
 @available(iOS 14, macOS 11, tvOS 14, watchOS 7, *)
 extension AppStorage: _Bindable {}
 
+@available(iOS 13.0, *)
 extension Binding: _Bindable {}
 
 @available(iOS 14, macOS 11, tvOS 14, watchOS 7, *)
@@ -81,4 +83,5 @@ extension FocusState.Binding: _Bindable {}
 @available(iOS 14, macOS 11, tvOS 14, watchOS 7, *)
 extension SceneStorage: _Bindable {}
 
+@available(iOS 13.0, *)
 extension State: _Bindable {}

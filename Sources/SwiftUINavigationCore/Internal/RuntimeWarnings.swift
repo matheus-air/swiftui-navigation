@@ -1,3 +1,4 @@
+@available(iOS 13.0, *)
 @_spi(RuntimeWarn)
 @_transparent
 @inline(__always)

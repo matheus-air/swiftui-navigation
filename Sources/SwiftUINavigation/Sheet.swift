@@ -6,6 +6,7 @@ import SwiftUI
   import AppKit
 #endif
 
+@available(iOS 13.0, *)
 extension View {
   /// Presents a sheet using a binding as a data source for the sheet's content.
   ///

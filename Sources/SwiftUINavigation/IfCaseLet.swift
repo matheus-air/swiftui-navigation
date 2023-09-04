@@ -36,6 +36,7 @@ import SwiftUI
 ///
 /// To exhaustively handle every case of a binding to an enum, see ``Switch``. Or, to unwrap a
 /// binding to an optional, see ``IfLet``.
+@available(iOS 13.0, *)
 public struct IfCaseLet<Enum, Case, IfContent, ElseContent>: View
 where IfContent: View, ElseContent: View {
   public let `enum`: Binding<Enum>
@@ -78,6 +79,7 @@ where IfContent: View, ElseContent: View {
   }
 }
 
+@available(iOS 13.0, *)
 extension IfCaseLet where ElseContent == EmptyView {
   public init(
     _ `enum`: Binding<Enum>,

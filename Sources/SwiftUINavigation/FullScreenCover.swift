@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 13.0, *)
 extension View {
   /// Presents a full-screen cover using a binding as a data source for the sheet's content.
   ///

@@ -172,10 +172,11 @@ extension View {
 }
 
 // NB: Deprecated after 0.3.0
-
+@available(iOS 13.0, *)
 @available(*, deprecated, renamed: "init(_:pattern:then:else:)")
 extension IfCaseLet {
-  public init(
+    @available(iOS 13.0, *)
+    public init(
     _ `enum`: Binding<Enum>,
     pattern casePath: CasePath<Enum, Case>,
     @ViewBuilder ifContent: @escaping (Binding<Case>) -> IfContent,
@@ -187,6 +188,7 @@ extension IfCaseLet {
 
 // NB: Deprecated after 0.2.0
 
+@available(iOS 13.0, *)
 extension NavigationLink {
   @available(*, deprecated, renamed: "init(unwrapping:onNavigate:destination:label:)")
   public init<Value, WrappedDestination>(

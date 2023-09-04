@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 13.0, *)
 extension Binding {
   func didSet(_ perform: @escaping (Value) -> Void) -> Self {
     .init(

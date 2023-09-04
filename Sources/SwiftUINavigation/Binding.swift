@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 13.0, *)
 extension Binding {
   /// Creates a binding by projecting the base value to an unwrapped value.
   ///
@@ -159,6 +160,7 @@ extension Binding {
   }
 }
 
+@available(iOS 13.0, *)
 extension Binding where Value: Equatable {
   /// Creates a binding that ignores writes to its wrapped value when equivalent to the new value.
   ///
@@ -172,6 +174,7 @@ extension Binding where Value: Equatable {
   }
 }
 
+@available(iOS 13.0, *)
 extension Binding {
   public func _printChanges(_ prefix: String = "") -> Self {
     Self(

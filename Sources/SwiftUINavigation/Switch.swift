@@ -43,6 +43,7 @@ import SwiftUI
 /// > Note: In debug builds, exhaustivity is handled at runtime: if the `Switch` encounters an
 /// > unhandled case, and no ``Default`` view is present, a runtime warning is issued and a warning
 /// > view is presented.
+@available(iOS 13.0, *)
 public struct Switch<Enum, Content: View>: View {
   public let `enum`: Binding<Enum>
   public let content: Content
@@ -62,6 +63,7 @@ public struct Switch<Enum, Content: View>: View {
 }
 
 /// A view that handles a specific case of enum state in a ``Switch``.
+@available(iOS 13.0, *)
 public struct CaseLet<Enum, Case, Content>: View
 where Content: View {
   @EnvironmentObject private var `enum`: BindingObject<Enum>
@@ -92,6 +94,7 @@ where Content: View {
 /// If you wish to use ``Switch`` in a non-exhaustive manner (_i.e._, you do not want to provide a
 /// ``CaseLet`` for every case of the enum), then you must insert a ``Default`` view at the end of
 /// the ``Switch``'s body, or use ``IfCaseLet`` instead.
+@available(iOS 13.0, *)
 public struct Default<Content: View>: View {
   private let content: Content
 
@@ -109,6 +112,7 @@ public struct Default<Content: View>: View {
   }
 }
 
+@available(iOS 13.0, *)
 extension Switch {
   public init<Case1, Content1, DefaultContent>(
     _ enum: Binding<Enum>,
@@ -1043,6 +1047,7 @@ extension Switch {
   }
 }
 
+@available(iOS 13.0, *)
 public struct _ExhaustivityCheckView<Enum>: View {
   @EnvironmentObject private var `enum`: BindingObject<Enum>
   let file: StaticString
@@ -1083,6 +1088,7 @@ public struct _ExhaustivityCheckView<Enum>: View {
   }
 }
 
+@available(iOS 13.0, *)
 private class BindingObject<Value>: ObservableObject {
   let wrappedValue: Binding<Value>
 

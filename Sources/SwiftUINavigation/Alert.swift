@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 13.0, *)
 extension View {
   /// Presents an alert from a binding to an optional value.
   ///

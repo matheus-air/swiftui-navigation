@@ -28,6 +28,7 @@ import SwiftUI
 ///   }
 /// }
 /// ```
+@available(iOS 13.0, *)
 public struct WithState<Value, Content: View>: View {
   @State var value: Value
   @ViewBuilder let content: (Binding<Value>) -> Content

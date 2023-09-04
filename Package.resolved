@@ -6,7 +6,7 @@
         "repositoryURL": "git@github.com:matheus-air/swift-case-paths",
         "state": {
           "branch": "ios-11-compatibility",
-          "revision": "c7a643af85b27a07721899286ab8a66cb09ea2aa",
+          "revision": "7b29698b4332453e135a00a58e6da1e76214212c",
           "version": null
         }
       },
@@ -15,7 +15,7 @@
         "repositoryURL": "git@github.com:matheus-air/swift-custom-dump",
         "state": {
           "branch": "ios-11-compatibility",
-          "revision": "2c5a992ccf6523c8cfedce686c86e8a884f8d8ff",
+          "revision": "0c655cd8235771ec24740638d852043a8ecd0c61",
           "version": null
         }
       },
@@ -24,7 +24,16 @@
         "repositoryURL": "https://github.com/apple/swift-docc-plugin",
         "state": {
           "branch": null,
-          "revision": "3303b164430d9a7055ba484c8ead67a52f7b74f6",
+          "revision": "26ac5758409154cc448d7ab82389c520fa8a8247",
+          "version": "1.3.0"
+        }
+      },
+      {
+        "package": "SymbolKit",
+        "repositoryURL": "https://github.com/apple/swift-docc-symbolkit",
+        "state": {
+          "branch": null,
+          "revision": "b45d1f2ed151d057b54504d653e0da5552844e34",
           "version": "1.0.0"
         }
       },
@@ -33,7 +42,7 @@
         "repositoryURL": "git@github.com:matheus-air/xctest-dynamic-overlay",
         "state": {
           "branch": "ios-11-compatibility",
-          "revision": "623a0f8757c530d495558e4f1eddef17cf93f6e8",
+          "revision": "6755647d578e0401fe2addbef8ff18305e9aad66",
           "version": null
         }
       }
